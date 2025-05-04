@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+/* h1 {
+  @apply text-5xl;
+} */
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+}
