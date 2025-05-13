@@ -40,7 +40,7 @@ class Services
             'label'                 => 'Service',
             'description'           => 'Service Type',
             'labels'                => $labels,
-            'supports'              => ['title', 'custom-fields', 'revisions', 'thumbnail'],
+            'supports'              => ['title', 'custom-fields', 'revisions'],
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,

@@ -46,19 +46,19 @@ class ThemeSettings extends Field
             ->addTab('social_media_settings', [
                 'instructions' =>   'Add social media links here. If left blank the social media icon for that network will not appear on the frontend.'
             ])
-            ->addUrl('Facebook', [
+            ->addUrl('facebook_link', [
                 'wrapper'   =>  ['width' => '50%']
             ])
-            ->addUrl('X/Twitter', [
+            ->addUrl('x_twitter_link', [
                 'wrapper'   =>  ['width' => '50%']
             ])
-            ->addUrl('Instagram', [
+            ->addUrl('instagram_link', [
                 'wrapper'   =>  ['width' => '50%']
             ])
-            ->addUrl('LinkedIn', [
+            ->addUrl('linkedin_link', [
                 'wrapper'   =>  ['width' => '50%']
             ])
-            ->addUrl('YouTube', [
+            ->addUrl('youtube_link', [
                 'wrapper'   =>  ['width' => '50%']
             ]);
 

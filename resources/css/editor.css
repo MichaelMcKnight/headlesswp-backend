@@ -1,4 +1,16 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: '#1B1F3B';
+  --color-secondary: '#9CA3AF';
+  --color-accent-1: '#F9FAFB';
+  --color-accent-2: '#FBBF24';
+  --color-accent-3: '#DC2626';
+
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Merriweather', serif;
+}
 
 /* h1 {
   @apply text-5xl;
@@ -6,6 +18,15 @@
 
 @layer base {
   h1 {
-    @apply text-5xl;
+    @apply text-[72px] leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-secondary font-black;
   }
 }

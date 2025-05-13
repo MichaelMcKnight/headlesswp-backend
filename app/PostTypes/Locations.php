@@ -40,7 +40,7 @@ class Locations
             'label'                 => 'Location',
             'description'           => 'Location Type',
             'labels'                => $labels,
-            'supports'              => ['title', 'custom-fields', 'revisions', 'thumbnail'],
+            'supports'              => ['title', 'custom-fields', 'revisions'],
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,

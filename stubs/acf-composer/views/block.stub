@@ -1,0 +1,3 @@
+<x-block-wrapper :block="$block" additional_classes="not-prose">
+
+</x-block-wrapper>

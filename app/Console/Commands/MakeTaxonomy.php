@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class MakeTaxonomy extends Command
 {
-    protected $name = 'make:Taxonomy';
+    protected $name = 'make:taxonomy';
     protected $description = 'Create a new taxonomy class';
 
     public function handle()

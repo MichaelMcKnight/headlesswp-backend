@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class MakePostType extends Command
 {
-    protected $name = 'make:PostType';
+    protected $name = 'make:posttype';
     protected $description = 'Create a new custom post type class';
 
     public function handle()

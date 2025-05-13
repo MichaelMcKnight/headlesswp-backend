@@ -18,6 +18,9 @@ class SingleLocation extends Field
             ->setLocation('post_type', '==', 'locations');
 
         $fields
+            ->addTrueFalse('headquarters', [
+                'instructions'  =>  'Check this field if this is the main headquarters. Make sure only one location has this enabled. If multiple locations have this checked it will show only the one with the most recent publish date.'
+            ])
             ->addTextarea('address', [
                 'rows'      =>  3,
                 'new_lines' =>  'br',

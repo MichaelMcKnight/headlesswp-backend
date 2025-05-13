@@ -25,7 +25,7 @@ class SingleService extends Field
                     'Web'
                 ]
             ])
-            ->addTextarea('summary')
+            ->addText('summary')
             ->addWysiwyg('description')
             ->addImage('icon', [
                 'wrapper'   =>  ['width' => '20%'],
@@ -34,7 +34,7 @@ class SingleService extends Field
                 'wrapper'       =>  ['width' => '80%'],
                 'button_label'  =>  'Add List Item',
             ])
-                ->addTextarea('feature', [
+                ->addText('feature', [
                     'rows'  =>  3
                 ])
             ->endRepeater();

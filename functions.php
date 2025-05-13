@@ -35,6 +35,9 @@ Application::configure()
     ->withProviders([
         App\Providers\ThemeServiceProvider::class,
         App\Providers\ConsoleServiceProvider::class,
+        App\Providers\MenuRestApiServiceProvider::class,
+        App\Providers\OptionsRestApiServiceProvider::class,
+        App\Providers\DuplicatePostsServiceProvider::class,
     ])
     ->boot();
 
@@ -50,7 +53,7 @@ Application::configure()
 |
 */
 
-collect(['setup', 'filters'])
+collect(['setup', 'filters', 'blocks', 'theme-specifics'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
@@ -59,3 +62,20 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+// ---------- Additional Functions ---------- //
+
+// Remove <p> tag wrappers from form output.
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+// Remove the "Comments" menu item from the admin menu
+function remove_comments_menu() {
+    remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'remove_comments_menu');
+
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyA7x8kMaDwG9RuubbOdgKZWE6poCV66CHA';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
